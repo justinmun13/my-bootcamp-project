@@ -1,6 +1,8 @@
-def main():
-    print("Hello from my-project!")
-
+from agent import agent
 
 if __name__ == "__main__":
-    main()
+    while True:
+        user_input = input("Ask the drone agent: ")
+        if user_input.lower() in ["exit", "quit"]:
+            break
+        print(agent(user_input))
